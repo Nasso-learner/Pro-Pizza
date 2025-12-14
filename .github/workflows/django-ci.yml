@@ -37,3 +37,8 @@ jobs:
       - name: Run tests
         run: |
           python manage.py test
+      services:
+      kafka:
+        image: confluentinc/cp-kafka:7.5.0
+        ports:
+          - 9092:9092
