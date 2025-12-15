@@ -13,6 +13,7 @@ producer = KafkaProducer(
     value_serializer=lambda v: json.dumps(v).encode("utf-8"),
 )
 
+
 def send_order_event(event_type, order_data):
     """
     event_type: "ORDER_CREATED" | "ORDER_UPDATED"
